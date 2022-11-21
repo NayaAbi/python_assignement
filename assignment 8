@@ -1,0 +1,79 @@
+import re
+import seaborn
+test_str= "will be used @ for text% preprocessing$."
+Text="”NumPy, <hl> pandas ?, matplotlib; " 
+#to_clean = re.compile('<.*?>')
+cleantext= re.sub(r'[^\w\s]', '', test_str)
+cleartext= re.sub(r'[^\w\s]', '', Text)
+print(cleantext)
+print(cleartext)
+
+import pandas as pd
+import numpy as np
+#from scipy.interpolate import spline
+from numpy import array
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+cities = pd.read_csv(r'C:\Users\abina\OneDrive\Desktop\Indian_cities\Indian_cities.csv')
+states=cities.sort_values(by="sex_ratio",ascending= False)
+
+#EDA
+#cities.info()
+missing_value =cities.isnull().sum() #to find the missing value in the data
+missing_value [:]
+#Data Cleaning
+cities=cities.dropna() #drop nan values
+
+import pandas as pd
+import numpy as np
+#from scipy.interpolate import spline
+from numpy import array
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib import cm
+from matplotlib.dates import date2num
+#from mpl_toolkits.basemap import Basemap
+
+
+
+states =cities.groupby('state_name')['sex_ratio'].mean().sort_values(ascending= True)
+
+#states.tail(10).plot(kind="barh",fontsize = 10,figsize=(10,10))
+#plt.grid(b=False, which='both', color='Black',linestyle='-')
+#plt.xlabel('sex_ratio', fontsize = 10)
+#plt.show ()
+
+#states.index[:10]
+
+
+#cities.iloc[8]
+#cities.loc[cities.shape[0]-1]
+
+#matplotlib inline
+
+cities.nlargest(5,"total_graduates")
+
+#f_pop=cities[cities['population_female']>200000]
+
+
+
+ cities.groupby('state_name', sort=True)['sex_ratio']
+
+#cities['male_graduates'].nunique()
+#cities["male_graduates"].value_counts()
+
+
+
+
+grad=cities.groupby("state_name")["total_graduates"].sum().sort_values(ascending = False)
+gp.head(10).plot(kind="barh",fontsize=10,figsize=(10,10),stacked= True)
+plt.xlabel('totalgraduate',fontsize=10)
+plt.show ()
+
+
+#pop=cities.groupby("state_name")["population_female","population_male"].sum().sort_values(ascending = False)
+cities.plot("population_female","population_male",kind="scatter",fontsize=10,figsize=(10,10))
+plt.xlabel('totalgraduate',fontsize=10)
+plt.show ()
+
