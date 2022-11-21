@@ -1,0 +1,256 @@
+#1.	Construct 2 lists containing all the available data types (integer, float, string, complex and Boolean) and do the following.
+import collections
+Mylist_1=[1,-2,"hi",5+2j];
+Mylist_2=[1,-2,"hello",2+2j];
+#a.	Create another list by concatenating above 2 lists
+b=Mylist_1+Mylist_2
+print (b)
+#b.	Find the frequency of each element in the concatenated list.
+counter=collections.Counter(b)
+print (counter)
+#c.	Print the list in reverse order.
+b.reverse()
+print (b)
+
+#2.	Create 2 Sets containing integers (numbers from 1 to 10 in one set and 5 to 15 in other set)
+set1={1,2,3,4,5,6,7,8,9,10}
+set2={5,6,7,8,9,10,11,12,13,14,15}
+
+#a.	Find the common elements in above 2 Sets.
+lis=set1.intersection(set2)
+print(lis)
+#b.	Find the elements that are not common.
+lis1=set.difference(set1,set2)
+print(lis1)
+#c.	Remove element 7 from both the Sets.
+set1.remove(7)
+set2.remove(7)
+print (set1)
+print (set2)
+
+#3.	Create a data dictionary of 5 states having state name as key and number of covid-19 cases as values.
+corona_cases = {'Tamilnadu':1000,'Andrapradesh':1990,'Kerala':3099,'Karnataka':3999,'Madhya_pradesh':3099}
+
+#a.	Print only state names from the dictionary.
+print(corona_cases.keys())
+#b.	Update another country and it’s covid-19 cases in the dictionary.
+corona_cases['Orisssa'] = "2999"
+print(corona_cases.items())
+
+x = 12345
+y = 543
+z = 399
+
+equation = 22*y + z
+
+if equation == x:
+    print('it is a valid relation')
+
+
+a=5;b=3;c=10
+a /= b;
+print (a)
+c*=5  
+print(c)
+
+l = 55
+u = 75
+i=0; 
+for num in range (num>75):
+    print(num)
+  
+
+Age1=5                   
+Age_1=100
+age1=100
+
+
+
+try:
+    a=int(input(print("Enter a number")))
+    b=1/a
+    print("answer:",b)
+except ZeroDivisionError as e:
+    print ("Invalid input,",e)
+
+
+
+
+    a=int(input(print("Enter a age")))
+
+#If age is less than 10, print “Children”.
+if a<10:print("Children")
+#If age is more than 60, print ‘senior citizens’
+elif a>60: print("senior citizens")
+#If it is in between 10 and 60, print ‘normal citizen’
+elif 10<= a <=60: print("normal citizen")
+
+
+#2.Find the final train ticket price with the following conditions.
+#a.	If male and senior citizen, 70% of fare is applicable
+
+def male():
+    a=1500;
+    num= int(input(print("Enter you age")))
+    if num>=60:
+        a*=0.7
+        print("cost",a)
+    else :
+        print("cost:",a)
+def female():
+    a=1500;
+    num= int(input(print("Enter you age")))
+    if num>=60:
+        a*=0.5
+        print("cost",a)
+    else :
+        a*=0.7
+        print("cost",a)
+        
+b= int(input(print("Enter you 1 for male/ 2 for female")))
+
+if b==1:
+    male();
+elif b==2:
+    female();
+            
+else :
+    print ("enter a valid age / gender")
+
+
+    num = float(input("Enter a number: "))
+if num > 0 and num%5==0:print("it is positive and divisible by 5")
+elif num == 0:print("Zero")
+elif num < 0 and num%5==0 : print("Negative number and divisible by 5")
+    else : print("Negative number and not divisible by 5")
+    
+
+c1= 3 + 5j
+
+abs(c1)
+
+
+list1 = [1,5.5, (10+20j),'data science']
+type(list1)
+
+
+list1.append("Kannan")
+print (list1)
+
+
+list1.pop(2)
+print (list1)
+
+list1.remove("Kannan")
+print (list1)
+
+list1.reverse()
+print(list1)
+
+list1.insert(2,"apple")
+print (list1)
+
+X=list1.index(1)
+print (X)
+list2=[2,3,45,12,45,78]
+maxvalue= max(list2)
+print(maxvalue)
+minvalue=min(list2)
+print(minvalue)
+
+list(range(10))
+list(range(10,20,2))
+
+input_string = input('Enter elements of a list separated by space ')
+print("\n")
+user_list = input_string.split()
+# print list
+print('list: ', user_list)
+
+# convert each item to int type
+for i in range(len(user_list)):
+    # convert each item to int type
+    user_list[i] = int(user_list[i])
+
+## 
+
+n_list = []
+n=int(input("enter the list size"))
+print ("\n")
+for i in range(0,n):
+    print("Enter number at index",i)
+    item= int(input())
+    n_list.append(item)
+    print ("list",n_list)
+
+n = int(input("Enter the size of list : "))
+print("\n")
+numList = list(map(float, input("Enter the list numbers separated by space ").strip().split()))[:n]
+print("User List: ", numList)
+
+
+    Lsit1= [2, 6, -5, 4, -8, -9, 10, 1]
+    pos=list(filter(lambda x: (x>0),Lsit1))
+    print(pos)
+
+#Write a simple user defined function that greets a person in such a way that:
+ #            i) It should accept both name of person and message you want to deliver.
+  #            ii) If no message is provided, it should greet a default message ‘How are you’
+   #        Ex: Hello ---xxxx---, How are you - default message.
+    #        Ex: Hello ---xxxx---, --xx your message xx---
+def call(name,msg="How are you?"):
+    print("Hello",name + ', ' + msg)
+    return    
+
+
+name=str(input("Enter you name"))
+msg=str(input("Enter the message"))
+call(name,msg)
+
+
+#start =int(input("enter the start"))
+#end=int(input("enter the end"))
+def reverse(n) :
+    
+    Reminder = temp % 10
+        reverse = (reverse * 10) + Reminder
+        temp = temp //10
+
+    
+    #else add the first digit to the end and recurse for remaining number
+    return reverse
+set1=set()
+set2=set()
+for i in range(100,250,1):
+    set1.add(i)
+set1
+
+for i in range(0,len(set1)):
+    set2 = reverse(str(set1(i)))
+set2
+#print (reverse)
+    #for i in range(len(num)):
+    #print(list1[i])
+    print (temp)
+
+    
+    
+
+minimum = int(input(" Please Enter the Minimum Value : "))
+maximum = int(input(" Please Enter the Maximum Value : "))
+
+print("Palindrome Numbers between %d and %d are : " %(minimum, maximum))
+for num in range(minimum, maximum + 1):
+    temp = num
+    reverse = 0
+    
+    while(temp > 0):
+        Reminder = temp % 10
+        reverse = (reverse * 10) + Reminder
+        temp = temp //10
+
+    if(num == reverse):
+        print("%d " %num, end = '  ')
+   
+ 
+
